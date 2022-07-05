@@ -24,6 +24,7 @@ import {
   InlineNewsletterPuff,
   PreviewNewsletterPuff,
   AutoNewsletterPuff,
+  OptaCricketScorecard,
   OptaFootballFixtures,
   OptaFootballStandings,
   OptaFootballSummary,
@@ -286,6 +287,17 @@ const renderers = ({
           </div>
         );
 
+      case "opta-cricket-scorecard":
+      case "opta-cricket-scorecard-v3":
+        return (
+          <div id={id}>
+            <OptaCricketScorecard
+              competition={attributes.competition}
+              match={attributes.match}
+            />
+          </div>
+        );
+
       case "opta-football-fixtures-v3":
         return (
           <div id={id}>
@@ -331,6 +343,12 @@ const renderers = ({
             />
           </div>
         );
+
+      case "opta-football-match-lineups-v3":
+      case "opta-football-top-scorers-v3":
+      case "opta-football-match-commentary-v3":
+      case "opta-football-hub":
+        return null;
 
       case "opta-rugby-union-fixtures-v2":
       case "opta-rugby-fixtures-v3":
@@ -381,12 +399,6 @@ const renderers = ({
             />
           </div>
         );
-
-      case "opta-football-match-lineups-v3":
-      case "opta-football-top-scorers-v3":
-      case "opta-football-match-commentary-v3":
-      case "opta-football-hub":
-        return null;
 
       case "in-article-puff":
         return (
