@@ -3,6 +3,98 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.5.1...@times-components/ts-slices@1.6.0) (2022-08-18)
+
+
+### Features
+
+* **TDP-1712:** remove react-native foreverrrrr ([#3064](https://github.com/newsuk/times-components/issues/3064)) ([2a20cb5](https://github.com/newsuk/times-components/commit/2a20cb5abc10a4e7ca2d62487967f8fcf4eccb62)), closes [#3037](https://github.com/newsuk/times-components/issues/3037) [#3045](https://github.com/newsuk/times-components/issues/3045) [#3050](https://github.com/newsuk/times-components/issues/3050) [#3056](https://github.com/newsuk/times-components/issues/3056) [#3057](https://github.com/newsuk/times-components/issues/3057) [#3066](https://github.com/newsuk/times-components/issues/3066) [#3065](https://github.com/newsuk/times-components/issues/3065) [#3037](https://github.com/newsuk/times-components/issues/3037) [#3045](https://github.com/newsuk/times-components/issues/3045) [#3045](https://github.com/newsuk/times-components/issues/3045) [#3056](https://github.com/newsuk/times-components/issues/3056) [#3066](https://github.com/newsuk/times-components/issues/3066) [#3069](https://github.com/newsuk/times-components/issues/3069) [#3068](https://github.com/newsuk/times-components/issues/3068) [#3070](https://github.com/newsuk/times-components/issues/3070) [#3072](https://github.com/newsuk/times-components/issues/3072) [#3073](https://github.com/newsuk/times-components/issues/3073) [#3071](https://github.com/newsuk/times-components/issues/3071) [#3074](https://github.com/newsuk/times-components/issues/3074) [#3076](https://github.com/newsuk/times-components/issues/3076) [#3079](https://github.com/newsuk/times-components/issues/3079) [#3078](https://github.com/newsuk/times-components/issues/3078) [#3083](https://github.com/newsuk/times-components/issues/3083) [#3087](https://github.com/newsuk/times-components/issues/3087) [#3091](https://github.com/newsuk/times-components/issues/3091) [#3096](https://github.com/newsuk/times-components/issues/3096) [#3102](https://github.com/newsuk/times-components/issues/3102) [#3105](https://github.com/newsuk/times-components/issues/3105) [#3108](https://github.com/newsuk/times-components/issues/3108) [#3111](https://github.com/newsuk/times-components/issues/3111) [#3112](https://github.com/newsuk/times-components/issues/3112) [#3113](https://github.com/newsuk/times-components/issues/3113) [#3114](https://github.com/newsuk/times-components/issues/3114) [#3120](https://github.com/newsuk/times-components/issues/3120) [#3119](https://github.com/newsuk/times-components/issues/3119) [#3112](https://github.com/newsuk/times-components/issues/3112) [#3126](https://github.com/newsuk/times-components/issues/3126) [#3112](https://github.com/newsuk/times-components/issues/3112) [#3126](https://github.com/newsuk/times-components/issues/3126) [#3127](https://github.com/newsuk/times-components/issues/3127) [#3116](https://github.com/newsuk/times-components/issues/3116) [#3128](https://github.com/newsuk/times-components/issues/3128) [#3132](https://github.com/newsuk/times-components/issues/3132) [#3133](https://github.com/newsuk/times-components/issues/3133)
+
+
+
+
+
+## [1.5.1](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.5.0...@times-components/ts-slices@1.5.1) (2022-08-05)
+
+**Note:** Version bump only for package @times-components/ts-slices
+
+
+
+
+
+# [1.5.0](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.4.5...@times-components/ts-slices@1.5.0) (2022-07-28)
+
+
+### Features
+
+* **TDP-2202:** update recommended slice layout ([#3062](https://github.com/newsuk/times-components/issues/3062)) ([7431919](https://github.com/newsuk/times-components/commit/7431919a36fc0758ce91c9a530edabdbec3cf040))
+
+
+
+
+
+## [1.4.5](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.4.4...@times-components/ts-slices@1.4.5) (2022-07-27)
+
+
+### Bug Fixes
+
+* **TDP-2268:** Double tracking bug - replace slice ([#3059](https://github.com/newsuk/times-components/issues/3059)) ([70783ce](https://github.com/newsuk/times-components/commit/70783ced2727227d0b41ce772307f9e9bc27fa15))
+
+
+
+
+
+## [1.4.4](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.4.3...@times-components/ts-slices@1.4.4) (2022-07-19)
+
+**Note:** Version bump only for package @times-components/ts-slices
+
+
+
+
+
+## [1.4.3](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.4.2...@times-components/ts-slices@1.4.3) (2022-07-18)
+
+**Note:** Version bump only for package @times-components/ts-slices
+
+
+
+
+
+## [1.4.2](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.4.1...@times-components/ts-slices@1.4.2) (2022-07-14)
+
+**Note:** Version bump only for package @times-components/ts-slices
+
+
+
+
+
+## [1.4.1](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.4.0...@times-components/ts-slices@1.4.1) (2022-07-12)
+
+**Note:** Version bump only for package @times-components/ts-slices
+
+
+
+
+
+# [1.4.0](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.3.25...@times-components/ts-slices@1.4.0) (2022-07-12)
+
+
+### Features
+
+* **TDP-1715:** remove react native from topics ([#3023](https://github.com/newsuk/times-components/issues/3023)) ([85cd12e](https://github.com/newsuk/times-components/commit/85cd12eaf132bf9f410d154a2e0400cea87a20b1))
+
+
+
+
+
+## [1.3.25](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.3.24...@times-components/ts-slices@1.3.25) (2022-07-11)
+
+**Note:** Version bump only for package @times-components/ts-slices
+
+
+
+
+
 ## [1.3.24](https://github.com/newsuk/times-components/compare/@times-components/ts-slices@1.3.23...@times-components/ts-slices@1.3.24) (2022-05-16)
 
 **Note:** Version bump only for package @times-components/ts-slices

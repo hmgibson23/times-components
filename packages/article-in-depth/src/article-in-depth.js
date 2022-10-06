@@ -77,12 +77,7 @@ class ArticlePage extends Component {
       receiveChildList,
       commentingConfig,
       isPreview,
-      swgProductId,
-      additionalRelatedArticlesFlag,
-      algoliaSearchKeys,
-      latestFromSectionFlag,
-      latestFromSection,
-      olympicsKeys
+      swgProductId
     } = this.props;
 
     if (error || isLoading) {
@@ -100,11 +95,6 @@ class ArticlePage extends Component {
         commentingConfig={commentingConfig}
         isPreview={isPreview}
         swgProductId={swgProductId}
-        additionalRelatedArticlesFlag={additionalRelatedArticlesFlag}
-        algoliaSearchKeys={algoliaSearchKeys}
-        latestFromSectionFlag={latestFromSectionFlag}
-        latestFromSection={latestFromSection}
-        olympicsKeys={olympicsKeys}
       />
     );
   }

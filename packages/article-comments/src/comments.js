@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { CommentContainer } from "./styles/responsive";
 import executeSSOtransaction from "./comment-login";
 import withTrackEvents from "./tracking/with-track-events";
+import { getDisplayNameFromLocalStorage, userShouldUpdateName } from "./utils";
 
 class Comments extends Component {
   constructor() {
@@ -24,7 +25,6 @@ class Comments extends Component {
     const {
       articleId,
       isReadOnly,
-      publishedTime,
       commentingConfig,
       onCommentStart,
       onCommentPost,
@@ -75,22 +75,26 @@ class Comments extends Component {
       }
     };
 
-    let isSpotAccountReadOnly = true;
-    let spotAccountId = commentingConfig.account.readOnly;
-
-    if (commentingConfig && commentingConfig.switchOver) {
-      const switchOverDate = commentingConfig.switchOver;
-      if (publishedTime > switchOverDate) {
-        isSpotAccountReadOnly = false;
-        spotAccountId = commentingConfig.account.current;
-      }
-    }
-
     document.addEventListener(
       "spot-im-current-user-typing-start",
-      onCommentStart,
+      async event => {
+        onCommentStart(event);
+
+        if (window.location.search.includes("enableRealNameCommenting")) {
+          const displayName = getDisplayNameFromLocalStorage();
+          if (!displayName) return;
+
+          const shouldShowBanner = await userShouldUpdateName(displayName);
+          if (shouldShowBanner) {
+            window.dispatchEvent(
+              new CustomEvent("SHOW_REAL_NAME_COMMENTING_BANNER", {})
+            );
+          }
+        }
+      },
       { once: true }
     );
+
     document.addEventListener(
       "spot-im-current-user-sent-message",
       onCommentPost
@@ -125,11 +129,11 @@ class Comments extends Component {
 
     if (!isReadOnly) {
       if (window.SPOTIM && window.SPOTIM.startSSO) {
-        executeSSOtransaction(isSpotAccountReadOnly, () => {});
+        executeSSOtransaction();
       } else {
-        document.addEventListener("spot-im-api-ready", () =>
-          executeSSOtransaction(isSpotAccountReadOnly, () => {})
-        );
+        document.addEventListener("spot-im-api-ready", () => {
+          executeSSOtransaction();
+        });
       }
     }
 
@@ -137,7 +141,7 @@ class Comments extends Component {
     launcherScript.setAttribute("async", "async");
     launcherScript.setAttribute(
       "src",
-      `https://launcher.spot.im/spot/${spotAccountId}`
+      `https://launcher.spot.im/spot/${commentingConfig.account}`
     );
     launcherScript.setAttribute("data-spotim-module", "spotim-launcher");
     launcherScript.setAttribute("data-post-id", articleId);
@@ -209,13 +213,8 @@ Comments.propTypes = {
   articleId: PropTypes.string.isRequired,
   isReadOnly: PropTypes.bool.isRequired,
   commentingConfig: PropTypes.shape({
-    accounts: PropTypes.shape({
-      current: PropTypes.string.isRequired,
-      readOnly: PropTypes.string.isRequired
-    }),
-    switchOver: PropTypes.string.isRequired
+    account: PropTypes.string.isRequired
   }).isRequired,
-  publishedTime: PropTypes.string.isRequired,
   onCommentStart: PropTypes.func,
   onCommentPost: PropTypes.func,
   onCommentNotification: PropTypes.func,

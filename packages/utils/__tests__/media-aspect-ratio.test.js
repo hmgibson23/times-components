@@ -3,9 +3,7 @@ import TestRenderer from "react-test-renderer";
 import {
   addSerializers,
   compose,
-  flattenStyleTransform,
   minimaliseTransform,
-  minimalNativeTransform,
   print
 } from "@times-components/jest-serializer";
 import TcText from "../src/tc-text";
@@ -15,9 +13,7 @@ addSerializers(
   expect,
   compose(
     print,
-    minimalNativeTransform,
-    minimaliseTransform((value, key) => key !== "style"),
-    flattenStyleTransform
+    minimaliseTransform((value, key) => key !== "style")
   )
 );
 

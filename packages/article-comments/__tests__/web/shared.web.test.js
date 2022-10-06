@@ -7,29 +7,45 @@ import "jest-styled-components";
 import { UserState } from "./mocks";
 
 import ArticleComments from "../../src/article-comments";
+import { ssoCallback } from "../../src/comment-login";
 
-const renderComments = ({
-  enabled,
-  publishedTime = "2021-08-10T16:00:00.000Z"
-}) =>
+const renderComments = ({ enabled }) =>
   render(
     <ArticleComments
       articleId="dummy-article-id"
-      publishedTime={publishedTime}
       commentsEnabled={enabled}
       isEnabled={enabled}
       onCommentGuidelinesPress={() => {}}
       onCommentsPress={() => {}}
-      commentingConfig={{
-        account: {
-          current: "CurrentSpotID",
-          readOnly: "ReadOnlySpotID"
-        },
-        switchOver: "2020-08-10T16:00:00.000Z"
-      }}
+      commentingConfig={{ account: "sp_pCQgrRiN" }}
       url="dummy-article-url"
     />
   );
+
+describe("comments-login", () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const xhrMock = {
+    open: jest.fn(),
+    send: jest.fn(),
+    addEventListener: jest.fn()
+  };
+
+  it("uses new commenting service", () => {
+    global.window = Object.create(window);
+
+    jest.spyOn(window, "XMLHttpRequest").mockImplementation(() => xhrMock);
+
+    ssoCallback("mock-code-a", {});
+
+    expect(xhrMock.open).toHaveBeenCalledWith(
+      "GET",
+      "/api/comments/loginv2?codeA=mock-code-a"
+    );
+  });
+});
 
 describe("User States", () => {
   it("enabled comments", () => {
@@ -41,7 +57,7 @@ describe("User States", () => {
     });
 
     expect(baseElement.getElementsByTagName("script")[0].src).toEqual(
-      "https://launcher.spot.im/spot/CurrentSpotID"
+      "https://launcher.spot.im/spot/sp_pCQgrRiN"
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -67,20 +83,6 @@ describe("User States", () => {
     });
     expect(asFragment()).toMatchSnapshot();
   });
-});
-
-xit("pre-switchover comments", () => {
-  const { asFragment, baseElement } = renderComments({
-    count: 123,
-    enabled: true,
-    publishedTime: "2019-08-10T16:00:00.000Z"
-  });
-  expect(baseElement.getElementsByTagName("script")[0].src).toEqual(
-    "https://launcher.spot.im/spot/ReadOnlySpotID"
-  );
-  expect(baseElement.getElementsByClassName("info").length).toEqual(1);
-
-  expect(asFragment()).toMatchSnapshot();
 });
 
 it("disabled comments", () => {
@@ -115,13 +117,7 @@ it("Render comments label, when comments are loaded", () => {
       isEnabled
       onCommentGuidelinesPress={() => {}}
       onCommentsPress={() => {}}
-      commentingConfig={{
-        account: {
-          current: "CurrentSpotID",
-          readOnly: "ReadOnlySpotID"
-        },
-        switchOver: "2020-08-10T16:00:00.000Z"
-      }}
+      commentingConfig={{ account: "sp_pCQgrRiN" }}
       url="dummy-article-url"
     />
   );
@@ -142,6 +138,7 @@ describe("window listeners added", () => {
     window.document.addEventListener = realAddEventListener;
     listeners = {};
   });
+
   it("all listeners added", () => {
     render(
       <ArticleComments
@@ -150,13 +147,7 @@ describe("window listeners added", () => {
         isEnabled
         onCommentGuidelinesPress={() => {}}
         onCommentsPress={() => {}}
-        commentingConfig={{
-          account: {
-            current: "CurrentSpotID",
-            readOnly: "ReadOnlySpotID"
-          },
-          switchOver: "2020-08-10T16:00:00.000Z"
-        }}
+        commentingConfig={{ account: "sp_pCQgrRiN" }}
         url="dummy-article-url"
       />
     );

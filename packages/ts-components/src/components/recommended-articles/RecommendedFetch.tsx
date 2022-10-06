@@ -5,6 +5,7 @@ declare global {
   }
 }
 
+import startCase from 'lodash.startcase';
 import React, { useEffect, useState } from 'react';
 
 import { FetchProvider } from '../../helpers/fetch/FetchProvider';
@@ -26,10 +27,7 @@ export const RecommendedFetch: React.FC<{
       const acsCookie = window.nuk.getCookieValue('acs_tnl');
       const envName = window.__TIMES_CONFIG__.environmentName;
 
-      const params = new URLSearchParams(window.location.search);
-      const flag = params.get('recommendedArticles');
-
-      if (acsCookie && isValidEnvironment(envName) && flag) {
+      if (acsCookie && isValidEnvironment(envName)) {
         setIsClientSide(true);
       }
     } catch (e) {
@@ -38,7 +36,7 @@ export const RecommendedFetch: React.FC<{
     }
   }, []);
 
-  const heading = `Today's ${articleSection}`;
+  const heading = `Today's ${startCase(articleSection)}`;
 
   return isClientSide ? (
     <FetchProvider
@@ -49,7 +47,7 @@ export const RecommendedFetch: React.FC<{
           object: 'RecommendedArticles',
           attrs: {
             event_navigation_action: 'navigation',
-            event_navigation_name: 'widget : relevant article',
+            event_navigation_name: 'widget:relevant article',
             event_navigation_browsing_method: 'click',
             section_details: `section : ${articleSection}`,
             article_name: articleHeadline,
@@ -59,7 +57,7 @@ export const RecommendedFetch: React.FC<{
           }
         }}
       >
-        <RecommendedArticles heading={heading} isVisible />
+        <RecommendedArticles heading={heading} />
       </TrackingContextProvider>
     </FetchProvider>
   ) : null;

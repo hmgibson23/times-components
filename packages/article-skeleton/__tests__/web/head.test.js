@@ -686,6 +686,8 @@ describe("Head", () => {
   ratios.forEach(({ crop, ratio }) => {
     const leadAsset = {
       __typename: "Video",
+      brightcoveAccountId: "5436121857001",
+      brightcoveVideoId: "5831024132001",
       caption: "Some Caption",
       credits: "Some Credits",
       [crop]: {
@@ -730,6 +732,59 @@ describe("Head", () => {
         }}
         logoUrl={logoUrl}
         paidContentClassName={paidContentClassName}
+      />
+    );
+    expect(testRenderer).toMatchSnapshot();
+  });
+
+  it("outputs a live blog schema", () => {
+    const testRenderer = TestRenderer.create(
+      <Head
+        article={{
+          ...article,
+          expirableFlags: [{ type: "LIVE", expiryTime: null }],
+          content: [
+            {
+              name: "interactive",
+              attributes: {
+                element: {
+                  value: "article-header",
+                  attributes: {
+                    headline: "headline",
+                    updated: "2022-04-20T20:30:00"
+                  }
+                }
+              },
+              children: []
+            },
+            {
+              children: [
+                {
+                  attributes: {
+                    value:
+                      "Boris Johnson's sister an ex-BBC broadcaster and John Major's health secretary will stand for Change UK in next month's European elections."
+                  },
+                  children: [],
+                  name: "text"
+                }
+              ],
+              name: "paragraph"
+            },
+            {
+              children: [
+                {
+                  attributes: {
+                    value:
+                      "The pro-Remain party announced its MEP hopefuls from almost 4"
+                  },
+                  children: [],
+                  name: "text"
+                }
+              ],
+              name: "paragraph"
+            }
+          ]
+        }}
       />
     );
     expect(testRenderer).toMatchSnapshot();

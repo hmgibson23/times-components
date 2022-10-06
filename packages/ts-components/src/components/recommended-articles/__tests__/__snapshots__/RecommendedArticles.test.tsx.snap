@@ -4,13 +4,14 @@ exports[`<RecommendedArticles> should render RelatedArticles correctly with 1 ar
 <DocumentFragment>
   <div
     id="recommended-articles"
-    style="display: block;"
   >
+    <div
+      class="sc-bdVaJa vbIkV"
+    >
+      Today's news
+    </div>
     <div>
       RelatedArticles
-      <div>
-        Today's news
-      </div>
       <div>
         Save or splurge: what experts spend their own money on
       </div>
@@ -23,13 +24,14 @@ exports[`<RecommendedArticles> should render RelatedArticles correctly with 2 ar
 <DocumentFragment>
   <div
     id="recommended-articles"
-    style="display: block;"
   >
+    <div
+      class="sc-bdVaJa vbIkV"
+    >
+      Today's news
+    </div>
     <div>
       RelatedArticles
-      <div>
-        Today's news
-      </div>
       <div>
         Save or splurge: what experts spend their own money on
       </div>
@@ -45,13 +47,14 @@ exports[`<RecommendedArticles> should render RelatedArticles correctly with 3 ar
 <DocumentFragment>
   <div
     id="recommended-articles"
-    style="display: block;"
   >
+    <div
+      class="sc-bdVaJa vbIkV"
+    >
+      Today's news
+    </div>
     <div>
       RelatedArticles
-      <div>
-        Today's news
-      </div>
       <div>
         Save or splurge: what experts spend their own money on
       </div>

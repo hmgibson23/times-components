@@ -3,6 +3,493 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.13.9](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.8...@times-components/article@7.13.9) (2022-09-23)
+
+
+### Bug Fixes
+
+* **TDP-2487:**  inline image special characters  ([d9d2c22](https://github.com/newsuk/times-components/commit/d9d2c2256f86be3b951590135aac27c2b0ae0767))
+
+
+### Reverts
+
+* Revert "fix(TDP-2487):  inline image special characters" (#3159) ([7e54d2f](https://github.com/newsuk/times-components/commit/7e54d2fc7003b74b9050915e87eed1e09866ab40)), closes [#3159](https://github.com/newsuk/times-components/issues/3159)
+
+
+
+
+
+## [7.13.8](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.7...@times-components/article@7.13.8) (2022-09-21)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.13.7](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.6...@times-components/article@7.13.7) (2022-09-21)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.13.6](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.5...@times-components/article@7.13.6) (2022-09-16)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.13.5](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.4...@times-components/article@7.13.5) (2022-09-15)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.13.4](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.3...@times-components/article@7.13.4) (2022-09-14)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.13.3](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.2...@times-components/article@7.13.3) (2022-09-13)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.13.2](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.1...@times-components/article@7.13.2) (2022-09-08)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.13.1](https://github.com/newsuk/times-components/compare/@times-components/article@7.13.0...@times-components/article@7.13.1) (2022-09-07)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+# [7.13.0](https://github.com/newsuk/times-components/compare/@times-components/article@7.12.0...@times-components/article@7.13.0) (2022-09-07)
+
+
+### Features
+
+* **TDP-000:** Remove algolia related articles and various TS imports ([#3147](https://github.com/newsuk/times-components/issues/3147)) ([c5601b4](https://github.com/newsuk/times-components/commit/c5601b41933f35a7a545a6f1c5b9297d76677305))
+
+
+
+
+
+# [7.12.0](https://github.com/newsuk/times-components/compare/@times-components/article@7.11.7...@times-components/article@7.12.0) (2022-09-06)
+
+
+### Features
+
+* **TDP-000:** Remove latest from section ([#3146](https://github.com/newsuk/times-components/issues/3146)) ([7ac0fc3](https://github.com/newsuk/times-components/commit/7ac0fc30b87ca98641997c0d7421c356e8b46917))
+
+
+
+
+
+## [7.11.7](https://github.com/newsuk/times-components/compare/@times-components/article@7.11.6...@times-components/article@7.11.7) (2022-09-06)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.11.6](https://github.com/newsuk/times-components/compare/@times-components/article@7.11.5...@times-components/article@7.11.6) (2022-09-06)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.11.5](https://github.com/newsuk/times-components/compare/@times-components/article@7.11.4...@times-components/article@7.11.5) (2022-09-06)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.11.4](https://github.com/newsuk/times-components/compare/@times-components/article@7.11.3...@times-components/article@7.11.4) (2022-09-06)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.11.3](https://github.com/newsuk/times-components/compare/@times-components/article@7.11.2...@times-components/article@7.11.3) (2022-09-01)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.11.2](https://github.com/newsuk/times-components/compare/@times-components/article@7.11.1...@times-components/article@7.11.2) (2022-08-25)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.11.1](https://github.com/newsuk/times-components/compare/@times-components/article@7.11.0...@times-components/article@7.11.1) (2022-08-20)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+# [7.11.0](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.22...@times-components/article@7.11.0) (2022-08-18)
+
+
+### Features
+
+* **TDP-1712:** remove react-native foreverrrrr ([#3064](https://github.com/newsuk/times-components/issues/3064)) ([2a20cb5](https://github.com/newsuk/times-components/commit/2a20cb5abc10a4e7ca2d62487967f8fcf4eccb62)), closes [#3037](https://github.com/newsuk/times-components/issues/3037) [#3045](https://github.com/newsuk/times-components/issues/3045) [#3050](https://github.com/newsuk/times-components/issues/3050) [#3056](https://github.com/newsuk/times-components/issues/3056) [#3057](https://github.com/newsuk/times-components/issues/3057) [#3066](https://github.com/newsuk/times-components/issues/3066) [#3065](https://github.com/newsuk/times-components/issues/3065) [#3037](https://github.com/newsuk/times-components/issues/3037) [#3045](https://github.com/newsuk/times-components/issues/3045) [#3045](https://github.com/newsuk/times-components/issues/3045) [#3056](https://github.com/newsuk/times-components/issues/3056) [#3066](https://github.com/newsuk/times-components/issues/3066) [#3069](https://github.com/newsuk/times-components/issues/3069) [#3068](https://github.com/newsuk/times-components/issues/3068) [#3070](https://github.com/newsuk/times-components/issues/3070) [#3072](https://github.com/newsuk/times-components/issues/3072) [#3073](https://github.com/newsuk/times-components/issues/3073) [#3071](https://github.com/newsuk/times-components/issues/3071) [#3074](https://github.com/newsuk/times-components/issues/3074) [#3076](https://github.com/newsuk/times-components/issues/3076) [#3079](https://github.com/newsuk/times-components/issues/3079) [#3078](https://github.com/newsuk/times-components/issues/3078) [#3083](https://github.com/newsuk/times-components/issues/3083) [#3087](https://github.com/newsuk/times-components/issues/3087) [#3091](https://github.com/newsuk/times-components/issues/3091) [#3096](https://github.com/newsuk/times-components/issues/3096) [#3102](https://github.com/newsuk/times-components/issues/3102) [#3105](https://github.com/newsuk/times-components/issues/3105) [#3108](https://github.com/newsuk/times-components/issues/3108) [#3111](https://github.com/newsuk/times-components/issues/3111) [#3112](https://github.com/newsuk/times-components/issues/3112) [#3113](https://github.com/newsuk/times-components/issues/3113) [#3114](https://github.com/newsuk/times-components/issues/3114) [#3120](https://github.com/newsuk/times-components/issues/3120) [#3119](https://github.com/newsuk/times-components/issues/3119) [#3112](https://github.com/newsuk/times-components/issues/3112) [#3126](https://github.com/newsuk/times-components/issues/3126) [#3112](https://github.com/newsuk/times-components/issues/3112) [#3126](https://github.com/newsuk/times-components/issues/3126) [#3127](https://github.com/newsuk/times-components/issues/3127) [#3116](https://github.com/newsuk/times-components/issues/3116) [#3128](https://github.com/newsuk/times-components/issues/3128) [#3132](https://github.com/newsuk/times-components/issues/3132) [#3133](https://github.com/newsuk/times-components/issues/3133)
+
+
+
+
+
+## [7.10.22](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.21...@times-components/article@7.10.22) (2022-08-15)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.21](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.20...@times-components/article@7.10.21) (2022-08-12)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.20](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.19...@times-components/article@7.10.20) (2022-08-12)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.19](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.18...@times-components/article@7.10.19) (2022-08-12)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.18](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.17...@times-components/article@7.10.18) (2022-08-12)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.17](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.16...@times-components/article@7.10.17) (2022-08-11)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.16](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.15...@times-components/article@7.10.16) (2022-08-10)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.15](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.14...@times-components/article@7.10.15) (2022-08-08)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.14](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.13...@times-components/article@7.10.14) (2022-08-08)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.13](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.12...@times-components/article@7.10.13) (2022-08-08)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.12](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.11...@times-components/article@7.10.12) (2022-08-05)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.11](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.10...@times-components/article@7.10.11) (2022-08-04)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.10](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.9...@times-components/article@7.10.10) (2022-08-04)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.9](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.8...@times-components/article@7.10.9) (2022-08-03)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.8](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.7...@times-components/article@7.10.8) (2022-08-02)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.7](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.6...@times-components/article@7.10.7) (2022-08-02)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.6](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.5...@times-components/article@7.10.6) (2022-07-29)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.5](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.4...@times-components/article@7.10.5) (2022-07-28)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.4](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.3...@times-components/article@7.10.4) (2022-07-27)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.3](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.2...@times-components/article@7.10.3) (2022-07-26)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.2](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.1...@times-components/article@7.10.2) (2022-07-26)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.10.1](https://github.com/newsuk/times-components/compare/@times-components/article@7.10.0...@times-components/article@7.10.1) (2022-07-21)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+# [7.10.0](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.12...@times-components/article@7.10.0) (2022-07-21)
+
+
+### Features
+
+* **TDP-1712:** imported jest-config-web and updated with some local … ([#3043](https://github.com/newsuk/times-components/issues/3043)) ([d502434](https://github.com/newsuk/times-components/commit/d502434b1005da88567a3849155cf5fa2c6cc755))
+
+
+
+
+
+## [7.9.12](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.11...@times-components/article@7.9.12) (2022-07-21)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.11](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.10...@times-components/article@7.9.11) (2022-07-20)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.10](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.9...@times-components/article@7.9.10) (2022-07-20)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.9](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.8...@times-components/article@7.9.9) (2022-07-20)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.8](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.7...@times-components/article@7.9.8) (2022-07-20)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.7](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.6...@times-components/article@7.9.7) (2022-07-19)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.6](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.5...@times-components/article@7.9.6) (2022-07-19)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.5](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.4...@times-components/article@7.9.5) (2022-07-18)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.4](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.3...@times-components/article@7.9.4) (2022-07-14)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.3](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.2...@times-components/article@7.9.3) (2022-07-13)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.2](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.1...@times-components/article@7.9.2) (2022-07-13)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.9.1](https://github.com/newsuk/times-components/compare/@times-components/article@7.9.0...@times-components/article@7.9.1) (2022-07-12)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+# [7.9.0](https://github.com/newsuk/times-components/compare/@times-components/article@7.8.173...@times-components/article@7.9.0) (2022-07-12)
+
+
+### Features
+
+* **TDP-1419:** Remove react-native from message-bar package ([#2997](https://github.com/newsuk/times-components/issues/2997)) ([a9c9081](https://github.com/newsuk/times-components/commit/a9c9081234e2ec8c917f51558fd6d959341e146e))
+
+
+
+
+
+## [7.8.173](https://github.com/newsuk/times-components/compare/@times-components/article@7.8.172...@times-components/article@7.8.173) (2022-07-11)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.8.172](https://github.com/newsuk/times-components/compare/@times-components/article@7.8.171...@times-components/article@7.8.172) (2022-07-11)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
+## [7.8.171](https://github.com/newsuk/times-components/compare/@times-components/article@7.8.170...@times-components/article@7.8.171) (2022-07-11)
+
+**Note:** Version bump only for package @times-components/article
+
+
+
+
+
 ## [7.8.170](https://github.com/newsuk/times-components/compare/@times-components/article@7.8.169...@times-components/article@7.8.170) (2022-07-08)
 
 **Note:** Version bump only for package @times-components/article

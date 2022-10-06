@@ -193,45 +193,6 @@ exports[`Article with automatically placed NewsletterPuff should not render anot
           >
             Some paragraph 5
           </p>
-          <div>
-            <div>
-              <div>
-                Related Articles
-              </div>
-              <nav>
-                <div>
-                  <div>
-                    <a
-                      href="https://ra.io"
-                    >
-                      <div>
-                        <img
-                          src="https://racrop169.io"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <section>
-                    <a
-                      href="https://ra.io"
-                    >
-                      <h3>
-                        Headline
-                      </h3>
-                    </a>
-                    <div />
-                    <div>
-                      <DatePublication
-                        date="2015-03-23T19:39:39.000Z"
-                        showDay={false}
-                      />
-                    </div>
-                    <div />
-                  </section>
-                </div>
-              </nav>
-            </div>
-          </div>
         </span>
         <div
           id="paywall-portal-article-footer"
@@ -242,9 +203,7 @@ exports[`Article with automatically placed NewsletterPuff should not render anot
           articleUrl="https://url.io"
           commentingConfig={
             Object {
-              "account": Object {
-                "current": "dummiy-spotim-id",
-              },
+              "account": "dummiy-spotim-id",
             }
           }
           commentsEnabled={true}
@@ -511,45 +470,6 @@ exports[`Article with automatically placed NewsletterPuff should render a Newsle
           >
             Some paragraph 5
           </p>
-          <div>
-            <div>
-              <div>
-                Related Articles
-              </div>
-              <nav>
-                <div>
-                  <div>
-                    <a
-                      href="https://ra.io"
-                    >
-                      <div>
-                        <img
-                          src="https://racrop169.io"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <section>
-                    <a
-                      href="https://ra.io"
-                    >
-                      <h3>
-                        Headline
-                      </h3>
-                    </a>
-                    <div />
-                    <div>
-                      <DatePublication
-                        date="2015-03-23T19:39:39.000Z"
-                        showDay={false}
-                      />
-                    </div>
-                    <div />
-                  </section>
-                </div>
-              </nav>
-            </div>
-          </div>
         </span>
         <div
           id="paywall-portal-article-footer"
@@ -560,9 +480,7 @@ exports[`Article with automatically placed NewsletterPuff should render a Newsle
           articleUrl="https://url.io"
           commentingConfig={
             Object {
-              "account": Object {
-                "current": "dummiy-spotim-id",
-              },
+              "account": "dummiy-spotim-id",
             }
           }
           commentsEnabled={true}

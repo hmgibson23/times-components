@@ -65,12 +65,7 @@ class ArticlePage extends Component {
       commentingConfig,
       paidContentClassName,
       isPreview,
-      swgProductId,
-      additionalRelatedArticlesFlag,
-      algoliaSearchKeys,
-      latestFromSectionFlag,
-      latestFromSection,
-      olympicsKeys
+      swgProductId
     } = this.props;
 
     if (error || isLoading) {
@@ -89,11 +84,6 @@ class ArticlePage extends Component {
         paidContentClassName={paidContentClassName}
         isPreview={isPreview}
         swgProductId={swgProductId}
-        additionalRelatedArticlesFlag={additionalRelatedArticlesFlag}
-        algoliaSearchKeys={algoliaSearchKeys}
-        latestFromSectionFlag={latestFromSectionFlag}
-        latestFromSection={latestFromSection}
-        olympicsKeys={olympicsKeys}
       />
     );
   }

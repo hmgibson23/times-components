@@ -181,12 +181,11 @@ const getLiveBlogUpdates = (article, publisher, author) => {
           }
         } else if (contentObj[i].name === "paragraph") {
           if (update !== undefined) {
-            const text = get(contentObj[i], "children[0].attributes.value");
-            const updateText = text ? `${get(text)} ` : "";
+            const text = get(contentObj[i], "children[0].attributes.value", "");
             if (update.articleBody) {
-              update.articleBody += updateText;
+              update.articleBody += ` ${text}`;
             } else {
-              update.articleBody = updateText;
+              update.articleBody = text;
             }
           }
         } else if (contentObj[i].name === "image") {
@@ -244,6 +243,7 @@ function Head({
     url
   } = article;
 
+  const { brightcoveAccountId, brightcoveVideoId } = leadAsset || {};
   const liveBlogArticleExpiry = getIsLiveBlogExpiryTime(article.expirableFlags);
   const isLiveBlogArticle = getIsLiveBlog(article.expirableFlags);
   const publication = PUBLICATION_NAMES[publicationName];
@@ -344,7 +344,7 @@ function Head({
           Array.isArray(descriptionMarkup) && descriptionMarkup.length
             ? renderTreeAsText({ children: descriptionMarkup })
             : seoDescription || leadAsset.title || title,
-        contentUrl: url
+        contentUrl: `https://players.brightcove.net/${brightcoveAccountId}/default_default/index.html?videoId=${brightcoveVideoId}`
       }
     : null;
 

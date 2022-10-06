@@ -33,14 +33,10 @@ import {
   OptaRugbyStandings,
   OptaRugbySummary,
   OptaRugbyMatchStats,
-  OlympicsMedalTable,
-  OlympicsSchedule,
   InfoCard,
   GalleryCarousel,
-  InArticleRelatedArticles,
   InfoCardBulletPoints,
   BigNumbers,
-  HiddenDiv,
   safeDecodeURIComponent,
   Timelines
 } from "@times-components/ts-components";
@@ -103,7 +99,6 @@ const renderers = ({
   template,
   analyticsStream,
   isPreview,
-  olympicsKeys,
   isLiveOrBreaking,
   section,
   articleHeadline
@@ -430,34 +425,6 @@ const renderers = ({
           </div>
         );
 
-      case "olympics-medal-table":
-        return (
-          <Context.Consumer key={key}>
-            {({ theme }) => (
-              <div id={id}>
-                <OlympicsMedalTable
-                  keys={olympicsKeys}
-                  sectionColor={theme.sectionColour}
-                />
-              </div>
-            )}
-          </Context.Consumer>
-        );
-
-      case "olympics-schedule":
-        return (
-          <Context.Consumer key={key}>
-            {({ theme }) => (
-              <div id={id}>
-                <OlympicsSchedule
-                  keys={olympicsKeys}
-                  sectionColor={theme.sectionColour}
-                />
-              </div>
-            )}
-          </Context.Consumer>
-        );
-
       default:
         return (
           <InteractiveContainer key={key} fullWidth={display === "fullwidth"}>
@@ -488,21 +455,6 @@ const renderers = ({
         imageUri={imageUri}
         label={label}
       />
-    );
-  },
-  autoInlineRelatedArticles(key, { element }) {
-    return (
-      <Context.Consumer key={key}>
-        {({ theme }) => (
-          <HiddenDiv className="inlineRelatedArticles">
-            <InArticleRelatedArticles
-              heading="Related Articles"
-              relatedArticles={element.attributes.relatedArticles}
-              sectionColour={theme.sectionColour}
-            />
-          </HiddenDiv>
-        )}
-      </Context.Consumer>
     );
   },
   keyFacts(key, attributes, renderedChildren, indx, node) {
@@ -637,7 +589,6 @@ const ArticleBody = ({
   isPreview,
   swgProductId,
   inArticlePuffFlag,
-  olympicsKeys,
   isLiveOrBreaking,
   articleHeadline
 }) =>
@@ -649,7 +600,6 @@ const ArticleBody = ({
       isPreview,
       swgProductId,
       inArticlePuffFlag,
-      olympicsKeys,
       isLiveOrBreaking,
       section,
       articleHeadline

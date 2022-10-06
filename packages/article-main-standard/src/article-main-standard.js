@@ -86,11 +86,6 @@ class ArticlePage extends Component {
       paidContentClassName,
       isPreview,
       swgProductId,
-      additionalRelatedArticlesFlag,
-      algoliaSearchKeys,
-      latestFromSectionFlag,
-      latestFromSection,
-      olympicsKeys,
       getFallbackThumbnailUrl169
     } = this.props;
 
@@ -111,11 +106,6 @@ class ArticlePage extends Component {
           paidContentClassName={paidContentClassName}
           isPreview={isPreview}
           swgProductId={swgProductId}
-          additionalRelatedArticlesFlag={additionalRelatedArticlesFlag}
-          algoliaSearchKeys={algoliaSearchKeys}
-          latestFromSectionFlag={latestFromSectionFlag}
-          latestFromSection={latestFromSection}
-          olympicsKeys={olympicsKeys}
         />
       </ArticleMainStandardContainer>
     );

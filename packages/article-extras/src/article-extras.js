@@ -1,16 +1,11 @@
-import React, { useState, useMemo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import UserState from "@times-components/user-state";
 import ArticleComments from "@times-components/article-comments";
 import RelatedArticles from "@times-components/related-articles";
 import { MessageContext } from "@times-components/message-bar";
 import SaveAndShareBar from "@times-components/save-and-share-bar";
-import {
-  RelatedArticleSlice,
-  RecommendedFetch,
-  LatestFromSection,
-  useAlgoliaSearch
-} from "@times-components/ts-components";
+import { RecommendedFetch } from "@times-components/ts-components";
 
 import ArticleTopics from "./article-topics";
 import { ShareAndSaveContainer } from "./styles/responsive";
@@ -32,28 +27,8 @@ const ArticleExtras = ({
   relatedArticleSlice,
   relatedArticlesVisible,
   commentingConfig,
-  topics,
-  additionalRelatedArticlesFlag,
-  latestFromSectionFlag,
-  latestFromSection,
-  publishedTime
+  topics
 }) => {
-  const [
-    algoliaRelatedArticleSlice,
-    setAlgoliaRelatedArticleSlice
-  ] = useState();
-
-  const { getRelatedArticles } = useAlgoliaSearch();
-
-  useMemo(
-    async () => {
-      if (additionalRelatedArticlesFlag) {
-        const data = await getRelatedArticles();
-        if (data) setAlgoliaRelatedArticleSlice(data);
-      }
-    },
-    [additionalRelatedArticlesFlag, getRelatedArticles]
-  );
   /* Nativo insert Sponsored Articles after the div#sponsored-article element. They are not able to insert directly into that element hence the container div */
   const sponsoredArticles = (
     <div id="sponsored-article-container">
@@ -91,33 +66,11 @@ const ArticleExtras = ({
           isVisible={relatedArticlesVisible}
           slice={relatedArticleSlice}
         />
-        {latestFromSectionFlag &&
-          latestFromSection && (
-            <LatestFromSection
-              latestFromSection={latestFromSection}
-              analyticsStream={analyticsStream}
-            />
-          )}
-        <RelatedArticleSlice
-          heading="Related Articles"
-          analyticsStream={analyticsStream}
-          slice={relatedArticleSlice}
-        />
         <RecommendedFetch
           articleId={articleId}
           articleHeadline={articleHeadline}
           articleSection={section}
         />
-        {additionalRelatedArticlesFlag &&
-          algoliaRelatedArticleSlice && (
-            <RelatedArticles
-              // heading="Additional Featured Articles"
-              heading={`AlgoliaSearch "${algoliaRelatedArticleSlice.query}"`}
-              analyticsStream={analyticsStream}
-              isVisible={relatedArticlesVisible}
-              slice={algoliaRelatedArticleSlice}
-            />
-          )}
       </div>
       {sponsoredArticles}
       <UserState
@@ -134,7 +87,6 @@ const ArticleExtras = ({
         <ArticleComments
           articleId={articleId}
           isEnabled={commentsEnabled}
-          publishedTime={publishedTime}
           commentingConfig={commentingConfig}
         />
       </UserState>
@@ -145,7 +97,6 @@ const ArticleExtras = ({
 ArticleExtras.propTypes = {
   analyticsStream: PropTypes.func.isRequired,
   articleId: PropTypes.string.isRequired,
-  publishedTime: PropTypes.string.isRequired,
   articleUrl: PropTypes.string.isRequired,
   section: PropTypes.string.isRequired,
   articleHeadline: PropTypes.string.isRequired,
@@ -153,20 +104,17 @@ ArticleExtras.propTypes = {
   registerNode: PropTypes.func.isRequired,
   relatedArticleSlice: PropTypes.shape({}),
   relatedArticlesVisible: PropTypes.bool.isRequired,
-  commentingConfig: PropTypes.string,
+  commentingConfig: PropTypes.shape({
+    account: PropTypes.string.isRequired
+  }).isRequired,
   topics: PropTypes.arrayOf(PropTypes.shape({})),
   savingEnabled: PropTypes.bool.isRequired,
-  sharingEnabled: PropTypes.bool.isRequired,
-  additionalRelatedArticlesFlag: PropTypes.bool.isRequired,
-  latestFromSectionFlag: PropTypes.bool.isRequired,
-  latestFromSection: PropTypes.shape({})
+  sharingEnabled: PropTypes.bool.isRequired
 };
 
 ArticleExtras.defaultProps = {
   relatedArticleSlice: null,
-  commentingConfig: null,
-  topics: null,
-  latestFromSection: null
+  topics: null
 };
 
 export default ArticleExtras;
