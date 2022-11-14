@@ -177,9 +177,7 @@ const ArticleSkeleton = ({
                 ) : null}
               </HeaderContainer>
               <BodyContainer>
-                <StaticContent
-                  html={
-                    '<div id="zephr-article-target-body">'} />
+                <StaticContent html={'<div id="zephr-article-target-body">'} />
                 {newContent && (
                   <ArticleBody
                     analyticsStream={analyticsStream}
