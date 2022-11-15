@@ -51,7 +51,8 @@ const ArticleSkeleton = ({
   isPreview,
   swgProductId,
   getFallbackThumbnailUrl169,
-  realnameInlineBlueBanner
+  realnameInlineBlueBanner,
+  zephrDivs
 }) => {
   const {
     commentsEnabled,
@@ -177,9 +178,11 @@ const ArticleSkeleton = ({
                 ) : null}
               </HeaderContainer>
               <BodyContainer>
-                <StaticContent
-                  html={'<div id="zephr-article-target-body"></div>'}
-                />
+                {!!zephrDivs && (
+                  <StaticContent
+                    html={'<div id="nu-zephr-article-target-body">&nbsp;</div>'}
+                  />
+                )}
                 {newContent && (
                   <ArticleBody
                     analyticsStream={analyticsStream}
