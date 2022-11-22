@@ -23,7 +23,8 @@ module.exports = (
     swgProductId,
     getFallbackThumbnailUrl169,
     commentCount,
-    realnameInlineBlueBanner
+    realnameInlineBlueBanner,
+    zephrDivs
   },
   userState
 ) => {
@@ -74,7 +75,8 @@ module.exports = (
       isPreview,
       swgProductId,
       commentCount,
-      realnameInlineBlueBanner
+      realnameInlineBlueBanner,
+      zephrDivs
     },
     name: "article"
   };
